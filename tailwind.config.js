@@ -11,7 +11,7 @@ module.exports = {
         'naranja': '#ff9628',
         'vio_claro': '#854fcb',
         'vio_oscuro': '#5a328d',
-        'fondo': '#343434'
+        'fondo': '#ffffff'
       },
     },
   },
