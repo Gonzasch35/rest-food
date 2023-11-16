@@ -27,9 +27,9 @@ const ModalProducto = () => {
                 </button>
             </div>
             <h1 className="text-3xl font-bold mt-5">{producto.nombre}</h1>
-            <p className="mt-5 font-black text-5xl text-amber-500">{formatearDinero(producto.precio)}</p>
-            <div className="flex gap-4 mt-5">
-                <button className="text-5xl" onClick={handleResta}>
+            <p className="mt-5 font-black text-5xl text-naranja">{formatearDinero(producto.precio)}</p>
+            <div className="flex gap-5 mt-5">
+                <button type="button" className="text-5xl" onClick={handleResta}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-7 w-7"
@@ -46,7 +46,7 @@ const ModalProducto = () => {
                     </svg>
                 </button>
                 <p className="text-4xl">{cantidad}</p>
-                <button className="text-5xl" onClick={handleSuma}>
+                <button type="button" className="text-5xl" onClick={handleSuma}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-7 w-7"
@@ -63,6 +63,9 @@ const ModalProducto = () => {
                     </svg>
                 </button>
             </div>
+
+            <button className="bg-vio_claro hover:bg-vio_oscuro px-5 py-2 mt-5 text-white font-bold uppercase rounded">Añadir al pedido</button>
+
         </div>
     </div>
   )

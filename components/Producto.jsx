@@ -16,11 +16,11 @@ const Producto = ({producto}) => {
             src={`/assets/img/${imagen}.jpg`}
         />
         <h3 className="text-2xl font-bold">{nombre}</h3>
-        <p className="mt-5 font-black text-4xl text-amber-500">{formatearDinero(precio)}</p>
+        <p className="mt-5 font-black text-4xl text-naranja">{formatearDinero(precio)}</p>
 
         <button 
             type="button" 
-            className="bg-indigo-600 font-bold hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase cursor-pointer"
+            className="bg-vio_claro font-bold hover:bg-vio_oscuro text-white w-full mt-5 p-3 uppercase cursor-pointer"
             onClick={() => {
                 handleChangeModal()
                 handleSetProducto(producto) 

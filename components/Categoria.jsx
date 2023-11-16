@@ -6,7 +6,8 @@ const Categoria = ({categoria}) => {
     const {categoriaActual, handleClickCategoria} = useQuiosco()
     const {nombre, icono, id} = categoria
   return (
-    <div className={`${categoriaActual?.id === id ? 'bg-amber-400' : ''} flex items-center gap-4 w-full border p-5 hover:bg-amber-400`}>
+    <div className={`${categoriaActual?.id === id ? 'bg-naranja' : ''} flex items-center gap-4 w-full border p-5 hover:bg-naranja cursor-pointer`}
+    onClick={() => handleClickCategoria(id)}>
         <Image
             width={50}
             height={50}
