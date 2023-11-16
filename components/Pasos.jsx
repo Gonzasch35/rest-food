@@ -1,9 +1,6 @@
 import { useRouter } from "next/router"
-import useQuiosco from "../hooks/useQuiosco"
 
 const Pasos = () => {
-
-    const {handleChangePaso, paso} = useQuiosco()
 
     const router = useRouter()
 
@@ -32,7 +29,6 @@ const Pasos = () => {
             <button 
               onClick={() => {
                 router.push(paso.url)
-                handleChangePaso(paso.paso)
               }}
               className="text-2xl font-bold"
               key={paso.paso}>

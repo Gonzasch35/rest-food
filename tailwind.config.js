@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'naranja': '#ff9628',
+        'naranja': '#ffa028',
         'vio_claro': '#854fcb',
         'vio_oscuro': '#5a328d',
         'fondo': '#ffffff'
