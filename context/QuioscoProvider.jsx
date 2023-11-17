@@ -93,10 +93,32 @@ const QuioscoProvider = ({children}) => {
         setPedido(eliminarProducto)
     }
 
-    const colocarOrden = async e => {
-        e.preventDefault()
+    const colocarOrden = async (e) => {
+        e.preventDefault();
 
-    }
+        try {
+            await axios.post('/api/ordenes', {pedido, nombre, total, fecha: Date.now().toString()})
+
+            // Resetear la app
+            setCategoriaActual(categorias[0])
+            setPedido([])
+            setNombre('')
+            setTotal(0)
+
+            toast.success('Pedido Realizado Correctamente', {
+                autoClose: 2000,
+                position: "bottom-right"
+            })
+
+            setTimeout(() => {
+                router.push('/')
+            }, 3000)
+
+        } catch (error) {
+            console.log(error)
+        }
+
+    };
 
     
     return( 
