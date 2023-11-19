@@ -13,7 +13,7 @@ const Orden = ({orden, pedido}) => {
             await axios.post(`/api/ordenes/${id}`)
             toast.success('Orden Lista')
         } catch (error) {
-            toast.error('Hubo un error')
+            toast.error('¡Hubo un error!')
         }
     }
 
