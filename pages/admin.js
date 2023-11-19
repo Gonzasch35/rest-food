@@ -5,10 +5,8 @@ import Orden from "../components/orden";
 
 export default function Admin() {
 
-    const fecher = () => {
-        axios('/api/ordenes').then(datos => datos.data)
-    }
-    const {data, error, isLoading} = useSWR('/api/ordenes', fetcher)
+    const fetcher = () => axios('/api/ordenes').then(datos => datos.data)
+    const {data, error, isLoading} = useSWR('/api/ordenes', fetcher, {refreshInterval: 100})
 
     return (
         <AdminLayout pagina={'Admin'}>
@@ -19,6 +17,7 @@ export default function Admin() {
                 <Orden 
                     key={orden.id}
                     orden={orden}
+                    pedido={orden.pedido}
                 />
             ) : ''}
 
